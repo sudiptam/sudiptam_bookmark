@@ -1,0 +1,17 @@
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+<h1>Favorites:</h1>
+<table>
+<th>
+<td><a href="/">AllList</a></td>
+<td><a href='/#archive'>Archive</a></td>
+</th>
+<% for entry in @collect.models: %>
+<tr>
+<td><%= entry.get('url') %></td>
+<td><%= entry.get('title') %></td>
+</tr>
+</table>

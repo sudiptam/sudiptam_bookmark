@@ -1,0 +1,43 @@
+<div>
+<div align="center" style="background-color: #9bb8e8;">
+	<h1>Bookmarks..</h1>
+
+	<form id="entry">
+	  Url:<input type="text" name="uname" id="url"><br>
+	  Title:<input type="text" name="tname" id="title"><br>
+	  <input type="hidden" name="fav" id="favt" value="">
+	  <input type="hidden" name="arch" id="arch" value="">
+	  <input type="hidden" name="tag_id" id="arch" value="">
+	  <input type="submit" value="Add">
+	</form>
+	</div>
+
+  <div>
+	<a href="/#allList">AllList</a><br>
+	<a href="/#favorites">Favorite</a><br>
+	<a href="/#archive">Archive</a>
+  </div>
+
+<div id="tags">
+  <select id="folder">
+  <option>select folder</option>
+	<% for tag in @tags.models: %>
+	<option value=<%=tag.get('id')%>><%= tag.get('name') %></option>
+	<% end %>
+  </select>
+</div>
+
+<table border='1'>
+<thead>
+<tr>
+<th>title</th>
+<th>url</th>
+<th>Actions</th>
+
+</tr>
+</thead>
+<tbody id="entries">
+
+</tbody>
+</table>
+

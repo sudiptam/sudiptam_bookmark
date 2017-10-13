@@ -1,0 +1,54 @@
+
+<td>
+    <%= @wats.get('title') %>&nbsp&nbsp</td>
+<td><a href="<%= @wats.get('url') %>"><%= @wats.get('title') %></a><br>
+</td>
+<td>
+    <input type="button" name="edit" id="edit" value="Edit">
+    <input type="button" name="del" id="delete" value="Delete">
+
+<% if @wats.get('favorites') == null : %>
+    <input type="button" id="fav" value="Favorites">
+
+<% else if @wats.get('favorites') == false : %>
+    <input type="button" id="fav" value="Favorites">
+
+<% else if @wats.get('favorites') == true : %>
+    <input type="button" id="fav" value="UnFavorites">
+
+<% end %>
+
+<% if @wats.get('archive') == null : %>
+    <input type="button" id="archive" value="Archive">
+
+<% else if @wats.get('archive') == false : %>
+    <input type="button" id="archive" value="Archive">
+
+<% else if @wats.get('archive') == true : %>
+    <input type="button" id="archive" value="UnArchive">
+
+<% end %>
+
+    <form id="submit"><input type="text" value="" id="createtag">
+    <input type="submit" value="Save">
+    </form>
+
+</td>
+
+<div id="dialog" title="Dialog Form" value="dialog_box">
+
+    <label>Url:</label><br>
+
+    <input id="url" name="url" type="text" value=<%=@wats.get('url') %>><br>
+
+    <label>Title:</label><br>
+
+    <input id="title" name="title" type="text" value=@wats.get('url')><br>
+
+    <input type="button" id="update" value="Update">
+    
+
+</div>
+
+
+</div>

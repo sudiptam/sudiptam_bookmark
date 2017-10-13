@@ -1,0 +1,17 @@
+<ul>
+    <li><a href="/">AllList</a></li>
+    <li><a href="/#favorites">Favorites</a></li>
+</ul>
+<table border='1'>
+  <thead>
+    <th>Url</th>
+    <th>Title</th>
+  </thead>
+  <tbody>
+    <tr>
+        <% for entry in @collect.models: %>
+        <td><%= entry.get('url') %></td>
+        <td><%= entry.get('title') %></td>
+    </tr>
+  </tbody>
+</table>

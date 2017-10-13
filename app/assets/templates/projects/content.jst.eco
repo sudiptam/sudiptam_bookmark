@@ -1,0 +1,11 @@
+<div>
+    <a href="/#">AllList</a><br>
+    <a href="/#favorites">Favorite</a><br>
+</div>
+
+<div>
+<ul>
+    <% for content in @content.models: %>
+    <li><%= content.get('url') %>&nbsp&nbsp&nbsp&nbsp<%= content.get('title') %></li>
+</ul>
+</div>
